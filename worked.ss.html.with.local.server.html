@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<body>
+
+		<img src="klematis.jpg" alt="flower" width="150" height="113">
+		<img src="klematis2.jpg" alt="flower" width="152" height="128">
+		<img src="smiley.gif" alt="Smiley face" width="42" height="42">
+
+		<p>Click the button to display the number of images in the document.</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		function myFunction() {
+			var x = "<img src=img/lariat.jpg><br/>";
+/*			  document.getElementById("demo").innerHTML = x;  */
+			  document.getElementById("demo").innerHTML += x; 
+	var folder = "img/";
+	$.ajax({
+	    url : folder,
+	    success: function (data) {
+            $(data).find("a").attr("href", function (i, val) {
+	                if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+	                   $("body").append( "<img src='"+ folder + val +"'>" );
+	                } 
+	            });
+	        }
+			});
+
+			}
+/*        myFunction(); */
+	</script>
+		<button onclick="myFunction()">Try it</button>
+
+		<p id="demo">DEMO-BEFORE</p>
+
+
+	</body>
+</html>
+
