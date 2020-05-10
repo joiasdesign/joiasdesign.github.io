@@ -3,7 +3,17 @@ body, html {
   height: 100%;
   color: rgb(53, 52, 52);
   line-height: 1.8;
-  background-color: #d6d2d2 !important;
+	font: 12px verdana;
+	color: #006666;
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffffff;
+	text-align: center;
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	background-attachment:fixed;
+	background-image: url(main_files/bullseye-vector-alone.png);
+  background-image: url("../img/bullseye-vector-alone.png");
 }
 
 /* Create a Parallax Effect */
@@ -16,13 +26,11 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-  background-image: url("../img/lisbon.jpg");
   min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url("../img/jewelry.jpg");
   min-height: 400px;
 }
 /* background transparent color for text logo text  */
@@ -33,7 +41,6 @@ background-color: rgba(7, 7, 19, 0.658) !important;
 
 /* Third image (Contact) */
 .bgimg-3 {
-  background-image: url("../img/lisbon.jpg");
   min-height: 400px;
 }
 
